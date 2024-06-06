@@ -1,5 +1,5 @@
 :root {
-    --card-height: 300px;
+    --card-height: 30vh;
     --card-width: calc(var(--card-height) / 1.5);
 }
 
@@ -10,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #191c19;
+    flex-wrap: wrap; 
 }
 
 .card {
@@ -18,8 +19,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 0 36px;
-    margin: 0 50px;
+    padding: 0 2rem; 
+    margin: 1rem; 
     cursor: pointer;
     position: relative;
 }
@@ -95,85 +96,25 @@ body {
     opacity: 1;
     transform: translate3d(0%, -30%, -100px);
 }
-/* ////////////////////////////////////// */
-/* 
-.content .hidden {
-    display: none;
-}
 
-.fade-in {
-    animation: fadeIn 1s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+@media (max-width: 768px) {
+    :root {
+        --card-height: 40vh;
+        --card-width: calc(var(--card-height) / 1.5);
     }
-
-    to {
-        opacity: 1;
+}
+@media (max-width: 542px) {
+    .card:nth-child(1){
+        margin-bottom: 100px;
     }
 }
 
-.loader {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    background-image: url("../img/dc443b2473.jpeg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1111;
-}
-
-.loader svg path:nth-child(1) {
-    stroke-dasharray: 927;
-    stroke-dashoffset: 927;
-    animation: line-anim 2s ease forwards 1.7ms;
-}
-
-.loader svg path:nth-child(2) {
-    stroke-dasharray: 1019;
-    stroke-dashoffset: 1019;
-    animation: line-anim 2s ease forwards 1.7ms;
-}
-
-.loader svg path:nth-child(3) {
-    stroke-dasharray: 924;
-    stroke-dashoffset: 924;
-    animation: line-anim 2s ease forwards 1.7ms;
-}
-
-.loader svg path:nth-child(4) {
-    stroke-dasharray: 900;
-    stroke-dashoffset: 900;
-    animation: line-anim 2s ease forwards 1.7ms;
-}
-
-.loader svg path:nth-child(5) {
-    stroke-dasharray: 687;
-    stroke-dashoffset: 687;
-    animation: line-anim 2s ease forwards 1.7ms;
-}
-
-.loader svg path:nth-child(6) {
-    stroke-dasharray: 506;
-    stroke-dashoffset: 506;
-    animation: line-anim 2s ease forwards 1.7ms;
-}
-
-.loader svg path:nth-child(7) {
-    stroke-dasharray: 1916;
-    stroke-dashoffset: 1916;
-    animation: line-anim 2s ease forwards 1.7ms;
-}
-
-@keyframes line-anim {
-    to {
-        stroke-dashoffset: 0;
+@media (max-width: 480px) {
+    :root {
+        --card-height: 50vh;
+        --card-width: calc(var(--card-height) / 1.5);
     }
-} */
+    .body {
+        flex-direction: column;
+    }
+}
