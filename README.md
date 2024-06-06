@@ -1,1 +1,0 @@
-# slide_show_3d
